@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;900&display=swap');
+
+:root {
+  /* COLORS */
+  --orange: hsl(22, 89%, 52%);
+  --lightOrange: hsl(22, 100%, 69%);
+  --darkBlue: hsl(220, 50%, 17%);
+  --greyBlue: hsl(221, 23%, 58%);
+  --grayBlue: var(--greyBlue);
+  --grey: hsl(198, 28%, 93%);
+  --gray: var(--grey);
+  --white: hsl(69, 69%, 100%);
+
+  /* Typography */
+  --font: 'Barlow', sans-serif;
+  --textSize: 1rem;
+  --lineHeight: 1.625rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --bgColor: var(--white);
+  --textColor: var(--greyBlue);
+
+  background: var(--bgColor);
+  font-family: var(--font);
+  color: var(--textColor);
+  font-size: var(--textSize);
+  line-height: var(--lineHeight);
+}
+
+h1,
+h2,
+h3 {
+  --headingColor: var(--darkBlue);
+  font-weight: 900;
+  color: var(--headingColor);
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(3rem, 7vw, 3.5rem);
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+.btn {
+  --bgColor: var(--orange);
+  color: var(--white);
+  background-color: var(--bgColor);
+  text-transform: uppercase;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 26px;
+  padding: 0.6875rem 0.875rem;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+button:hover,
+.btn:hover {
+  --bgColor: var(--lightOrange);
+}
+
+.btn2 {
+  --bgColor: var(--grey);
+  color: var(--darkBlue);
+}
+
+.btn2:hover {
+  --bgColor: var(--darkBlue);
+  color: var(--white);
+}
+
+nav {
+  padding: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  display: grid;
+  padding: 1.5rem;
+}
+
+.header__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-gap: 2rem;
+}
+
+.header__content h1,
+.header__content p {
+  grid-column: 1/-1;
+}
+
+.header__content aside {
+  font-weight: bold;
+  text-transform: uppercase;
+}
